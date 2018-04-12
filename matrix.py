@@ -1,5 +1,21 @@
 import math
 
+#HELPER FUNCTION
+def make_vector(a,b):
+    ret = []
+    ret.append(b[0] - a[0])
+    ret.append(b[1] - a[1])
+    ret.append(b[2] - a[2])
+    return ret
+
+#HELPER FUNCTION
+def cross_multiply(v1,v2):
+    ret = []
+    ret.append(v1[1]*v2[2] - v1[2]*v2[1])
+    ret.append(v1[2]*v2[0] - v1[0]*v2[2])
+    ret.append(v1[0]*v2[1] - v1[1]*v2[0])
+    return ret
+
 def make_bezier():
     return [
         [-1, 3, -3, 1],
